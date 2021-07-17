@@ -1,6 +1,6 @@
 ## Publisher-Subscriber Microservice App with MQ
 
-###Config-server
+### Config-server
 
     Common properties(queue name, exchange name, routing keys etc) stored in file(local git repo) 
     And this properties accessed via config-server by other services
