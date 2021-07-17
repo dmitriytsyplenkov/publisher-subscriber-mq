@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77ad9f8b-b58c-4848-a191-f06c134f940e" name="Default Changelist" comment="" />
+    <list default="true" id="77ad9f8b-b58c-4848-a191-f06c134f940e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,18 +42,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/subscriber/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.dts.subscriber.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq" />
+      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq\subscriber\src\main\resources" />
+      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq\publisher\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.dts.subscriber.repositories" />
@@ -59,9 +63,8 @@
       <recent name="com.dts.subscriber.configs" />
       <recent name="com.dts.publisher.config" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq\subscriber\src\main\resources" />
-      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq\publisher\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DIMITREE\IdeaProjects\publisher-subscriber-mq" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SubscriberApplication">
@@ -110,6 +113,7 @@
       <workItem from="1626441938312" duration="368000" />
       <workItem from="1626442322937" duration="4727000" />
       <workItem from="1626467165859" duration="18575000" />
+      <workItem from="1626490569505" duration="363000" />
     </task>
     <task id="LOCAL-00001" summary="updated README.MD">
       <created>1626483659587</created>
@@ -174,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626490400010</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added gitignore">
+      <created>1626490642827</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626490642827</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +193,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated README.MD" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated README.MD" />
+    <MESSAGE value="added gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="336" y="5" key="#Project_Structure" timestamp="1626442347670">
@@ -202,9 +214,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@0.0.1920.1040" timestamp="1626490027701" />
-    <state x="518" y="88" key="CommitChangelistDialog2" timestamp="1626490399531">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1168" y="65" key="CommitChangelistDialog2" timestamp="1626490642322">
+      <screen x="-1600" y="65" width="1600" height="860" />
     </state>
+    <state x="-1168" y="65" key="CommitChangelistDialog2/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@-1600.65.1600.860" timestamp="1626490642322" />
     <state x="518" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@0.0.1920.1040" timestamp="1626490399531" />
     <state x="-1021" y="236" key="FileChooserDialogImpl" timestamp="1626389893117">
       <screen x="-1600" y="65" width="1600" height="860" />
@@ -279,9 +292,10 @@
     </state>
     <state x="-1299" y="74" key="SettingsEditor/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@-1600.65.1600.860" timestamp="1626390226881" />
     <state x="361" y="11" key="SettingsEditor/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@0.0.1920.1040" timestamp="1626442366340" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1626490158563">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1140" y="274" key="Vcs.Push.Dialog.v2" timestamp="1626490644925">
+      <screen x="-1600" y="65" width="1600" height="860" />
     </state>
+    <state x="-1140" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@-1600.65.1600.860" timestamp="1626490644925" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1600.65.1600.860/1920.0.1414.754@0.0.1920.1040" timestamp="1626490158563" />
     <state x="274" y="121" key="new project wizard" timestamp="1626441635723">
       <screen x="0" y="0" width="1920" height="1040" />
