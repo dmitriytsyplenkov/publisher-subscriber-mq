@@ -23,4 +23,4 @@ It uses in-memory H2 database(it could be easily replaced to any supported SQL D
 (change related properties application.properties file and also add dependency with driver to DB)))
         
 #### PS
-There could be some troubles to import it into IDE like Intellij IDEA(some times it requires some refreshes)    
+There could be some troubles to import it into IDE like Intellij IDEA(sometimes it requires some refreshes)    
