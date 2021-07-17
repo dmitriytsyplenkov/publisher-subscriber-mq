@@ -22,5 +22,3 @@ Subscriber listens RabbitMQ and persists messages in different tables for differ
 It uses in-memory H2 database(it could be easily replaced to any supported SQL DB
 (change related properties in application.properties file and add dependency with driver to DB)))
         
-#### PS
-There could be some troubles to import it into IDE like Intellij IDEA(sometimes it requires some refreshes)    
