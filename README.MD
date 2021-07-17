@@ -3,7 +3,7 @@
 ### Config-server
     Common properties(queue name, exchange name, routing keys etc) stored in file(local git repo) 
     And this properties accessed via config-server by other services
-    To init repo you can run [configserver_git_init.sh]:scripts/configserver_git_init.sh
+    To init repo you can run [configserver_git_init.sh](scripts/configserver_git_init.sh)
 
 ### RabbitMQ
     Also you need to have RabbitMQ installed aswell
