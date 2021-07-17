@@ -7,7 +7,7 @@ To init repo you can run [configserver_git_init.sh](scripts/configserver_git_ini
 
 ### RabbitMQ
 Also you need to have RabbitMQ installed aswell
-Here you can find file to take it from docker repo [docker-compose.yml](scripts/docker-compose.yml)
+Here you can find file to take it from docker repo [rabbitmq_docker_run.sh](scripts/rabbitmq_docker_run.sh)
 In this app default settings of RabbitMQ used(port=5672 etc) 
 But you can reconfigure it in common file which is accessed via Config server
   
@@ -21,4 +21,6 @@ There are two types of messages which is published in same queue but with differ
 Subscriber listens RabbitMQ and persists messages in different tables for different binding keys
 It uses in-memory H2 database(it could be easily replaced to any supported SQL DB
 (change related properties application.properties file and also add dependency with driver to DB)))
-            
+        
+#### PS
+There could be some troubles to import it into IDE like Intellij IDEA(some times it requires some refreshes)    
