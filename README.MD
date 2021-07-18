@@ -3,7 +3,7 @@
 ### Config-server 
 Common properties(queue name, exchange name, routing keys etc) stored in the file (local git repo).
 And this properties accessed via config-server by other services.
-To init repo you can run [configserver_git_init.sh](scripts/configserver_git_init.sh).
+To init repo you need to run [configserver_git_init.sh](scripts/configserver_git_init.sh).
 
 ### RabbitMQ
 Also you need to have RabbitMQ installed as well.
@@ -22,5 +22,3 @@ Subscriber listens RabbitMQ and persists messages in different tables for differ
 It uses in-memory H2 database(it could be easily replaced to any supported SQL DB
 (change related properties in application.properties file and add dependency with driver to DB)))
         
-#### PS
-There could be some troubles to import it into IDE like Intellij IDEA(sometimes it requires some refreshes)    
