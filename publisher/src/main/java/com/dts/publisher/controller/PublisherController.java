@@ -20,9 +20,9 @@ public class PublisherController {
     }
     @PostMapping("/send")
     public ResponseEntity<String> sendMessage(@RequestBody MqMessage mqMessage,
-                                      @Value("${mq.settings.exchange.name}") String exchangeName,
-                                      @Value("${mq.settings.purchase-key}") String purchaseRoutingKey,
-                                      @Value("${mq.settings.subscription-key}") String subscriptionRoutingKey) {
+                                      @Value("${mq.settings.exchange.name:default.exchange.name}") String exchangeName,
+                                      @Value("${mq.settings.purchase.key:default.purchase.key}") String purchaseRoutingKey,
+                                      @Value("${mq.settings.subscription.key:default.subscription.key}") String subscriptionRoutingKey) {
         if (mqMessage != null) {
             if (mqMessage.getAction() == ActionType.PURCHASE) {
                  rabbitTemplate.convertAndSend(exchangeName, purchaseRoutingKey, mqMessage);

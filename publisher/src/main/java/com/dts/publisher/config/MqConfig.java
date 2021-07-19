@@ -3,8 +3,6 @@ package com.dts.publisher.config;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
-import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -13,24 +11,28 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MqConfig {
 
-    @Value("${mq.settings.queue.name}")
-    private String queueName;
-    @Value("${mq.settings.exchange.name}")
+    @Value("${mq.settings.purchase.queue.name:default.purchase.queue.name}")
+    private String purchaseQueueName;
+    @Value("${mq.settings.subscription.queue.name:default.subscription.queue.name}")
+    private String subscriptionQueueName;
+    @Value("${mq.settings.exchange.name:default.exchange.name}")
     private String exchangeName;
-    @Value("${mq.settings.purchase-key}")
+    @Value("${mq.settings.purchase.key:default.purchase.key}")
     private String purchaseRoutingKey;
 
-    @Value("${mq.settings.subscription-key}")
+    @Value("${mq.settings.subscription.key:default.subscription.key}")
     private String subscriptionRoutingKey;
 
     @Bean
     public Declarables topicBindings() {
-        Queue queue = new Queue(queueName, false);
+        Queue purchaseQueue = new Queue(purchaseQueueName, true);
+        Queue subscriptionQueue = new Queue(subscriptionQueueName, true);
         TopicExchange exchange = new TopicExchange(exchangeName);
-        return new Declarables(queue,
+        return new Declarables(purchaseQueue,
+                subscriptionQueue,
                 exchange,
-                BindingBuilder.bind(queue).to(exchange).with(purchaseRoutingKey),
-                BindingBuilder.bind(queue).to(exchange).with(subscriptionRoutingKey));
+                BindingBuilder.bind(purchaseQueue).to(exchange).with(purchaseRoutingKey),
+                BindingBuilder.bind(subscriptionQueue).to(exchange).with(subscriptionRoutingKey));
     }
 
     @Bean
