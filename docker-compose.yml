@@ -1,0 +1,36 @@
+version: '3'
+services:
+  rabbitmq_broker:
+    image: rabbitmq:3-management
+    hostname: myrabbit
+    expose:
+      - "5672"
+    ports:
+    - "15672:15672"
+    - "5672:5672"
+  config-server:
+    build: config-server/
+    hostname: config-server
+    expose:
+      - "8888"
+    ports:
+      - "8888:8888"
+    depends_on:
+      - rabbitmq_broker
+  publisher:
+    build: publisher/
+    ports:
+      - "8083:8083"
+    expose:
+      - "8083"
+    depends_on:
+      - rabbitmq_broker
+      - config-server
+  subscriber:
+    build: subscriber/
+    ports:
+      - "8084:8084"
+    depends_on:
+      - rabbitmq_broker
+      - config-server
+      - publisher

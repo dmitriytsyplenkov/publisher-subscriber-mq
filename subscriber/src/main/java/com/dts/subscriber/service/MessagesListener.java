@@ -24,7 +24,8 @@ public class MessagesListener {
     @RabbitListener(bindings = @QueueBinding(
             value=@Queue(name = "${mq.settings.purchase.queue.name:default.purchase.queue.name}",durable = "true"),
             exchange = @Exchange(value = "${mq.settings.exchange.name:default.exchange.name}",type = "topic"),
-            key="${mq.settings.purchase.key:default.purchase.key}"))
+            key="${mq.settings.purchase.key:default.purchase.key}")
+    )
     public void handlePurchase(Purchase purchase) {
         log.info("Handle purchase message!!!" + purchase.toString());
         purchaseService.savePurchase(purchase);
@@ -33,7 +34,8 @@ public class MessagesListener {
     @RabbitListener(bindings = @QueueBinding(
             value=@Queue(name = "${mq.settings.subscription.queue.name:default.subscription.queue.name}", durable = "true"),
             exchange = @Exchange(value = "${mq.settings.exchange.name:default.exchange.name}",type = "topic"),
-            key="${mq.settings.subscription.key:default.subscription.key}"))
+            key="${mq.settings.subscription.key:default.subscription.key}")
+    )
     public void handleSubscription(Subscription subscription) {
         log.info("Handle subscription message!!!" + subscription.toString());
         subscriptionService.saveSubscription(subscription);

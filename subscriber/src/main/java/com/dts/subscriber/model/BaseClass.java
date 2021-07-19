@@ -1,6 +1,6 @@
 package com.dts.subscriber.model;
 
-import com.dts.publisher.model.ActionType;
+
 import lombok.Data;
 import lombok.ToString;
 
